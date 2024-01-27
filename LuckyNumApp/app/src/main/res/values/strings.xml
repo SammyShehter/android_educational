@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LuckyNumApp</string>
+    <string name="welcomemessage">${welcomeMessage}</string>
+</resources>

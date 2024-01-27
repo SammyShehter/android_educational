@@ -1,3 +1,4 @@
 *
-!.gitignore
-!LuckyNumApp
+!/.gitignore
+!/LuckyNumApp/
+!/LuckyNumApp/**
