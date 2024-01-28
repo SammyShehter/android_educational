@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="welcomeText"
+            type="String" />
+
+        <variable
+            name="songTitle"
+            type="String" />
+
+        <variable
+            name="timeLeft"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/welcome_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@{welcomeText}"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/welcome_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="320dp"
+            android:contentDescription="@string/material_motion_easing_standard"
+            android:src="@drawable/music_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/song_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="305dp"
+            android:text="@{songTitle}"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/fast_backwards"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="208dp"
+            android:background="@drawable/baseline_fast_rewind_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/fast_forward"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="208dp"
+            android:background="@drawable/baseline_fast_forward_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/fast_backwards"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:background="@drawable/baseline_fast_forward_24"-->
+        <!--            tools:layout_editor_absoluteX="102dp"-->
+        <!--            tools:layout_editor_absoluteY="463dp" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/fast_forward"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:background="@drawable/baseline_fast_forward_24"-->
+        <!--            tools:layout_editor_absoluteX="249dp"-->
+        <!--            tools:layout_editor_absoluteY="463dp" />-->
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="208dp"
+            android:background="@drawable/baseline_pause_24"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/song_title_view"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="208dp"
+            android:background="@drawable/baseline_play_arrow_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/song_title_view"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pause_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{timeLeft}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seek_bar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
